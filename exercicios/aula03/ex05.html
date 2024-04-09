@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética de Duas Notas</title>
+</head>
+<body>
+    <!-- Programa para calcular a média aritmética de duas notas. -->
+
+    <script>
+        let nota1, nota2;
+        
+        do {
+            nota1 = parseFloat(prompt("Digite a primeira nota (0 a 10):"));
+        } while (nota1 < 0 || nota1 > 10);
+
+        do {
+            nota2 = parseFloat(prompt("Digite a segunda nota (0 a 10):"));
+        } while (nota2 < 0 || nota2 > 10);
+
+        let media = (nota1 + nota2) / 2;
+        console.log(`A média entre as notas ${nota1} e ${nota2} é: ${media.toFixed(2)}`);
+    </script>
+</body>
+</html>

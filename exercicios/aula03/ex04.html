@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Carga de Caminhão</title>
+</head>
+
+<body>
+    <!-- Programa para calcular o custo da carga de um caminhão com base no estado e código da carga. -->
+
+    <script>
+        // Solicita as informações ao usuário
+        let codigoEstado = parseInt(prompt("Digite o código do estado de origem (1 a 5):"));
+        let pesoToneladas = parseFloat(prompt("Digite o peso da carga do caminhão em toneladas:"));
+        let codigoCarga = parseInt(prompt("Digite o código da carga (10 a 40):"));
+
+        // Calcula o peso da carga em quilos
+        let pesoQuilos = pesoToneladas * 1000;
+
+        // Determina o preço por kg com base no código da carga
+        let precoPorKg;
+        if (codigoCarga >= 10 && codigoCarga <= 20) {
+            precoPorKg = 100;
+        } else if (codigoCarga >= 21 && codigoCarga <= 30) {
+            precoPorKg = 250;
+        } else if (codigoCarga >= 31 && codigoCarga <= 40) {
+            precoPorKg = 340;
+        }
+
+        // Calcula o preço da carga
+        let precoCarga = pesoQuilos * precoPorKg;
+
+        // Determina o imposto com base no estado
+        let impostoPercentual;
+        switch (codigoEstado) {
+            case 1:
+                impostoPercentual = 0.35; // 35%
+                break;
+            case 2:
+                impostoPercentual = 0.25; // 25%
+                break;
+            case 3:
+                impostoPercentual = 0.15; // 15%
+                break;
+            case 4:
+                impostoPercentual = 0.05; // 5%
+                break;
+            case 5:
+                impostoPercentual = 0; // Isento
+                break;
+            default:
+                impostoPercentual = 0; // Por padrão, assume-se isento
+                alert("Código do estado inválido. Será considerado isento de imposto.");
+        }
+
+        // Calcula o valor do imposto
+        let valorImposto = precoCarga * impostoPercentual;
+
+        // Calcula o valor total transportado pelo caminhão
+        let valorTotal = precoCarga + valorImposto;
+
+        // Exibe os resultados
+        alert(`Peso da carga em quilos: ${pesoQuilos} kg
+               Preço da carga: R$ ${precoCarga.toFixed(2)}
+               Valor do imposto: R$ ${valorImposto.toFixed(2)}
+               Valor total: R$ ${valorTotal.toFixed(2)}`);
+    </script>
+</body>
+
+</html>

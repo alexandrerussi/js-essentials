@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Consumo Médio de Automóvel</title>
+</head>
+
+<body>
+    <!-- Algoritmo para determinar o consumo médio de um automóvel e avaliar sua eficiência. -->
+
+    <script>
+        // Solicita os dados ao usuário
+        let distanciaTotal = parseFloat(prompt("Digite a distância total percorrida (em km):"));
+        let totalCombustivel = parseFloat(prompt("Digite o total de combustível gasto (em litros):"));
+
+        // Calcula o consumo médio
+        let consumoMedio = distanciaTotal / totalCombustivel;
+
+        // Avalia e exibe a eficiência do automóvel
+        if (consumoMedio < 8) {
+            alert("Esse carro bebe hein! Consumo médio: " + consumoMedio.toFixed(2) + " km/L");
+        } else {
+            alert("Autonomia legal. Consumo médio: " + consumoMedio.toFixed(2) + " km/L");
+        }
+    </script>
+</body>
+
+</html>
