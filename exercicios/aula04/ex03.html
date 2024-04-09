@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+</head>
+
+<body>
+    <!-- Programa para determinar e mostrar todos os números primos entre 2 e 2000. -->
+
+    <!-- Para determinar se um número é primo, você precisa verificar se ele não tem divisores além de 1 e ele mesmo. Isso pode ser feito testando se o número é divisível por qualquer número menor que ele e maior que 1. Se ele for divisível, não é primo; se não for divisível, é primo.
+
+    Aqui está um exemplo de como o programa solicitado poderia ser implementado em HTML e JavaScript, levando em conta o intervalo de 2 a 2000: -->
+    
+    <script>
+        // Inicia o loop principal de 2 até 2000
+        for (let numero = 2; numero <= 2000; numero++) {
+            let primo = true; // Assume que o número é primo
+
+            // Verifica se o número é primo
+            for (let divisor = 2; divisor <= Math.sqrt(numero); divisor++) {
+                // Se o número é divisível por divisor, então não é primo
+                if (numero % divisor === 0) {
+                    primo = false;
+                    break; // Não precisa verificar outros divisores
+                }
+            }
+
+            // Se após as verificações o número permanece sendo primo, exibe no console
+            if (primo) {
+                console.log(numero);
+            }
+        }
+    </script>
+</body>
+
+</html>

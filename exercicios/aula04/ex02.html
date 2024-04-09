@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Números Inteiros</title>
+</head>
+
+<body>
+    <!-- Programa para calcular a soma de todos os números inteiros entre 1 e n. -->
+
+    <script>
+        let n;
+
+        do {
+            n = parseInt(prompt("Digite um número inteiro positivo:"));
+        } while (n <= 0);
+
+        let soma = 0;
+        for (let i = 1; i <= n; i++) {
+            soma += i;
+        }
+
+        console.log(`A soma de 1 até ${n} é: ${soma}`);
+    </script>
+</body>
+
+</html>
