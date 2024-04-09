@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Com o programa do exercício anterior faça as seguintes verificações:
+
+    Verifique qual o gênero do usuário. A partir disto, troque a mensagem para que apareça da seguinte forma:
+    Para M:
+    Olá, Fulano! Seu gênero é masculino.
+    Para F:
+    Olá, Fulana! Seu gênero é feminino.
+    Para O:
+    Olá, Fulano! Seu gênero é outro que não feminino ou masculino.
+    Para N:
+    Olá, Fulano! Você decidiu não responder a pergunta. -->
+
+
+    <script>
+        // Obter o nome e gênero do usuário
+        let nome = prompt("Por favor, digite seu nome:");
+        let genero = prompt("Digite seu gênero: M para Masculino, F para Feminino, O para Outro, N para não responder.");
+
+        // Verificar o gênero e exibir uma mensagem
+        if (genero === "M") {
+            console.log(`Olá, ${nome}! Você escolheu a opção Masculino.`);
+        } else if (genero === "F") {
+            console.log(`Olá, ${nome}! Você escolheu a opção Feminino.`);
+        } else if (genero === "O") {
+            console.log(`Olá, ${nome}! Você escolheu uma opção que não é Feminino ou Masculino.`);
+        } else if (genero === "N") {
+            console.log(`Olá, ${nome}! Você escolheu não responder à pergunta.`);
+        } else {
+            console.log("Opção inválida. Por favor, digite M, F, O ou N.");
+        }
+    </script>
+</body>
+
+</html>

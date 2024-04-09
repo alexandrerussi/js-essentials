@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Neste problema, deve-se ler o nome de uma peça que chamaremos de peça1, o número de peças1 que o usuário quer, o valor unitário de cada peça1, o nome de uma peça2, o número de peças2 e o valor unitário de cada peça2. Após, calcule e mostre o valor a ser pago. -->
+
+    <script>
+        // Ler as informações da peça1
+        let nomePeca1 = prompt("Digite o nome da peça 1:");
+        let quantidadePeca1 = parseInt(prompt("Digite a quantidade de peças 1 desejada:"));
+        let valorUnitarioPeca1 = parseFloat(prompt("Digite o valor unitário da peça 1:"));
+
+        // Ler as informações da peça2
+        let nomePeca2 = prompt("Digite o nome da peça 2:");
+        let quantidadePeca2 = parseInt(prompt("Digite a quantidade de peças 2 desejada:"));
+        let valorUnitarioPeca2 = parseFloat(prompt("Digite o valor unitário da peça 2:"));
+
+        // Calcular o valor total a ser pago
+        let valorTotal = (quantidadePeca1 * valorUnitarioPeca1) + (quantidadePeca2 * valorUnitarioPeca2);
+
+        // Exibir o valor a ser pago
+        console.log(`O valor total a ser pago é: R$ ${valorTotal}`);
+    </script>
+</body>
+
+</html>

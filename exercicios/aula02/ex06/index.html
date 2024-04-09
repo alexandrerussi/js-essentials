@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Troco</title>
+</head>
+
+<body>
+    <!-- Crie um programa que receba o valor do produto e valor pago. Calcule o troco a ser pago. O valor do troco deve ser exibido no terminal. -->
+
+    <script>
+        // Solicita o valor do produto e o valor pago pelo usuário
+        let valorProduto = parseFloat(prompt("Digite o valor do produto:"));
+        let valorPago = parseFloat(prompt("Digite o valor pago:"));
+
+        // Calcula o troco
+        let troco = valorPago - valorProduto;
+
+        // Verifica se o valor pago é suficiente e exibe o resultado
+        if (troco < 0) {
+            console.log("Valor pago insuficiente.");
+        } else {
+            console.log(`O troco a ser devolvido é: R$ ${troco.toFixed(2)}`);
+        }
+    </script>
+</body>
+
+</html>

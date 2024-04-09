@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status do Voto</title>
+</head>
+
+<body>
+    <!-- Programa para determinar se o voto é obrigatório, opcional, ou proibido com base no ano de nascimento. -->
+
+    <script>
+        // Solicita o ano de nascimento do usuário
+        let anoNascimento = parseInt(prompt("Digite seu ano de nascimento:"));
+        // Obtém o ano atual
+        let anoAtual = new Date().getFullYear();
+        // Calcula a idade
+        let idade = anoAtual - anoNascimento;
+
+        // Determina a situação do voto com base na idade
+        if (idade < 16) {
+            alert("Voto proibido este ano.");
+        } else if (idade >= 18 && idade <= 70) {
+            alert("Voto obrigatório este ano.");
+        } else {
+            alert("Voto opcional este ano.");
+        }
+    </script>
+</body>
+
+</html>

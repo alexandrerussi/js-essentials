@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+</head>
+
+<body>
+    <!-- Faça um programa que peça dois números e imprima o maior deles, e informe caso eles sejam iguais. -->
+
+    <script>
+        // Solicita dois números ao usuário
+        let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+        let numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+        // Compara os números e imprime o maior ou se são iguais
+        if (numero1 > numero2) {
+            console.log(`O maior número é: ${numero1}`);
+        } else if (numero2 > numero1) {
+            console.log(`O maior número é: ${numero2}`);
+        } else {
+            console.log("Os números são iguais.");
+        }
+    </script>
+</body>
+
+</html>

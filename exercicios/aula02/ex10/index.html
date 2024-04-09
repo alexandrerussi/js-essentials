@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+
+<body>
+    <!-- Calculadora simples que recebe dois números e uma operação matemática (+, -, *, /), calcula e mostra o resultado. -->
+
+    <script>
+        // Solicita os dois números e a operação ao usuário
+        let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+        let numero2 = parseFloat(prompt("Digite o segundo número:"));
+        let operacao = prompt("Digite a operação (+, -, *, /):");
+
+        // Realiza o cálculo com base na operação escolhida
+        switch(operacao) {
+            case '+':
+                alert("Resultado: " + (numero1 + numero2));
+                break;
+            case '-':
+                alert("Resultado: " + (numero1 - numero2));
+                break;
+            case '*':
+                alert("Resultado: " + (numero1 * numero2));
+                break;
+            case '/':
+                if(numero2 === 0) {
+                    alert("Erro: Divisão por zero é impossível.");
+                } else {
+                    alert("Resultado: " + (numero1 / numero2));
+                }
+                break;
+            default:
+                alert("Operação inválida.");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Leia 2 valores A e B, que correspondem a 2 notas de um aluno. A seguir, calcule e informe a média ponderada do aluno, sabendo que a nota A tem peso 4 e a nota B tem peso 6. -->
+
+    <script>
+        // Ler os valores das notas A e B
+        let notaA = parseFloat(prompt("Digite a primeira nota:"));
+        let notaB = parseFloat(prompt("Digite a segunda nota:"));
+
+        // Definindo os pesos
+        let pesoA = 4;
+        let pesoB = 6;
+
+        // Calcular a média ponderada
+        let mediaPonderada = ((notaA * pesoA) + (notaB * pesoB)) / (pesoA + pesoB);
+
+        // Exibir a média ponderada
+        console.log(`A média ponderada do aluno é: ${mediaPonderada}`);
+    </script>
+</body>
+
+</html>
