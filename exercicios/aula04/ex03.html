@@ -15,6 +15,7 @@
     Aqui está um exemplo de como o programa solicitado poderia ser implementado em HTML e JavaScript, levando em conta o intervalo de 2 a 2000: -->
     
     <script>
+        let cont = 0;
         // Inicia o loop principal de 2 até 2000
         for (let numero = 2; numero <= 2000; numero++) {
             let primo = true; // Assume que o número é primo
@@ -31,8 +32,11 @@
             // Se após as verificações o número permanece sendo primo, exibe no console
             if (primo) {
                 console.log(numero);
+                cont++;
             }
         }
+
+        console.log(cont)
     </script>
 </body>
 
